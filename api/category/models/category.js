@@ -12,10 +12,10 @@ module.exports = {
 
   lifecycles: {
     async afterCreate(_, __) {
-      netlifyWebhook && axios.post(vercelWebhook);
+      vercelWebhook && axios.post(vercelWebhook);
     },
     async afterUpdate(_, __, ___) {
-      netlifyWebhook && axios.post(vercelWebhook);
+      vercelWebhook && axios.post(vercelWebhook);
     },
   },
 };
